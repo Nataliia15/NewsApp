@@ -1,4 +1,4 @@
-package com.example.staticbroadcastrecieverexample;
+package com.example.newsapp;
 
 import android.view.View;
 

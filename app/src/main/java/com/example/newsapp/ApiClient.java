@@ -1,6 +1,4 @@
-package com.example.staticbroadcastrecieverexample;
-
-import java.io.Serializable;
+package com.example.newsapp;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

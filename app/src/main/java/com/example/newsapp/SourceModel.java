@@ -1,6 +1,5 @@
-package com.example.staticbroadcastrecieverexample;
+package com.example.newsapp;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class SourceModel {

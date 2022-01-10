@@ -1,4 +1,4 @@
-package com.example.staticbroadcastrecieverexample;
+package com.example.newsapp;
 
 import org.junit.Test;
 
