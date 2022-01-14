@@ -2,7 +2,9 @@ package com.example.newsapp;
 
 import com.google.gson.annotations.SerializedName;
 
-public class ArticleModel {
+import java.io.Serializable;
+
+public class ArticleModel  {
     @SerializedName("source")
     private SourceModel source;
     @SerializedName("author")
