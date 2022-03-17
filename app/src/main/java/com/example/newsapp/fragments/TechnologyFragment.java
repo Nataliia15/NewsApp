@@ -1,4 +1,4 @@
-package com.example.newsapp;
+package com.example.newsapp.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,11 +10,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import com.example.newsapp.utils.NewsLoader;
+import com.example.newsapp.R;
 
 public class TechnologyFragment extends Fragment {
-    List<ArticleModel> list;
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
+    private static final String CATEGORY="technology";
+    private static final String TITLE="Technology";
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment_technology,container,false);
         recyclerView=view.findViewById(R.id.recyclerView);
@@ -24,8 +26,8 @@ public class TechnologyFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Technology");
-       NewsLoader newsLoader=new NewsLoader(getContext(),recyclerView,"technology");
+        getActivity().setTitle(TITLE);
+       NewsLoader newsLoader=new NewsLoader(getContext(),recyclerView,CATEGORY,false,null);
        newsLoader.loadNews();
     }
 

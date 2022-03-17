@@ -12,14 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewsApp"
         android:usesCleartextTraffic="true">
-        <activity android:name="com.example.newsapp.WebActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name="com.example.newsapp.MainActivity">
+        <activity android:name="com.example.newsapp.activities.WebActivity"
+            android:parentActivityName=".activities.MainActivity"></activity>
+        <activity android:name="com.example.newsapp.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

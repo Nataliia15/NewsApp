@@ -1,8 +1,7 @@
-package com.example.newsapp;
+package com.example.newsapp.retrofit;
 
+import com.example.newsapp.retrofit.SourceModel;
 import com.google.gson.annotations.SerializedName;
-
-import java.io.Serializable;
 
 public class ArticleModel  {
     @SerializedName("source")

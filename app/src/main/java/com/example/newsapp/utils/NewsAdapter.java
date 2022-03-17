@@ -1,7 +1,6 @@
-package com.example.newsapp;
+package com.example.newsapp.utils;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.newsapp.R;
+import com.example.newsapp.retrofit.ArticleModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

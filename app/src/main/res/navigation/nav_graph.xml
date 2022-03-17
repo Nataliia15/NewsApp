@@ -7,11 +7,11 @@
 
     <fragment
         android:id="@+id/healthFragment"
-        android:name="com.example.newsapp.HealthFragment"
+        android:name="com.example.newsapp.fragments.HealthFragment"
         android:label="HealthFragment" />
     <fragment
         android:id="@+id/businessFragment"
-        android:name="com.example.newsapp.BusinessFragment"
+        android:name="com.example.newsapp.fragments.BusinessFragment"
         android:label="BusinessFragment" >
         <action
             android:id="@+id/action_businessFragment_to_healthFragment"
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/generalFragment"
-        android:name="com.example.newsapp.GeneralFragment"
+        android:name="com.example.newsapp.fragments.GeneralFragment"
         android:label="GeneralFragment" >
         <action
             android:id="@+id/action_generalFragment_to_businessFragment"
@@ -36,18 +36,27 @@
     </fragment>
     <fragment
         android:id="@+id/entertainmentFragment"
-        android:name="com.example.newsapp.EntertainmentFragment"
+        android:name="com.example.newsapp.fragments.EntertainmentFragment"
         android:label="EntertainmentFragment" />
     <fragment
         android:id="@+id/scienceFragment"
-        android:name="com.example.newsapp.ScienceFragment"
+        android:name="com.example.newsapp.fragments.ScienceFragment"
         android:label="ScienceFragment" />
     <fragment
         android:id="@+id/sportFragment"
-        android:name="com.example.newsapp.SportFragment"
+        android:name="com.example.newsapp.fragments.SportFragment"
         android:label="SportFragment" />
     <fragment
         android:id="@+id/technologyFragment"
-        android:name="com.example.newsapp.TechnologyFragment"
+        android:name="com.example.newsapp.fragments.TechnologyFragment"
         android:label="TechnologyFragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.newsapp.fragments.SearchFragment"
+        android:label="search_blank"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/emptyFragment"
+        android:name="com.example.newsapp.EmptyFragment"
+        android:label="EmptyFragment" />
 </navigation>

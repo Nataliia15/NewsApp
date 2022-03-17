@@ -1,4 +1,4 @@
-package com.example.newsapp;
+package com.example.newsapp.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,13 +10,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import com.example.newsapp.utils.NewsLoader;
+import com.example.newsapp.R;
 
-public class ScienceFragment extends Fragment {
-    List<ArticleModel> list;
-    RecyclerView recyclerView;
+public class GeneralFragment extends Fragment {
+    private RecyclerView recyclerView;
+    private static final String CATEGORY="general";
+    private static final String TITLE="General";
+
+
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_science,container,false);
+        View view=inflater.inflate(R.layout.fragment_general,container,false);
         recyclerView=view.findViewById(R.id.recyclerView);
         return view;
     }
@@ -24,8 +28,8 @@ public class ScienceFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("Science");
-        NewsLoader newsLoader=new NewsLoader(getContext(),recyclerView,"science");
+        getActivity().setTitle(TITLE);
+        NewsLoader newsLoader=new NewsLoader(getContext(),recyclerView,CATEGORY,false,null);
         newsLoader.loadNews();
     }
 }

@@ -1,4 +1,4 @@
-package com.example.newsapp;
+package com.example.newsapp.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,31 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import com.example.newsapp.utils.NewsLoader;
+import com.example.newsapp.R;
 
-public class GeneralFragment extends Fragment {
-    List<ArticleModel>list;
-    RecyclerView recyclerView;
+
+public class BusinessFragment extends Fragment {
+    private RecyclerView recyclerView;
+    private static final String CATEGORY="business";
+    private static final String TITLE="Business";
+
+
+
+    @Nullable
+    @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_general,container,false);
+        View view=inflater.inflate(R.layout.fragment_business,container,false);
         recyclerView=view.findViewById(R.id.recyclerView);
         return view;
     }
-
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        getActivity().setTitle("General");
-        NewsLoader newsLoader=new NewsLoader(getContext(),recyclerView,"general");
+        getActivity().setTitle(TITLE);
+        NewsLoader newsLoader=new NewsLoader(getContext(),recyclerView,CATEGORY,false,null);
         newsLoader.loadNews();
     }
+
+
 }
